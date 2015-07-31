@@ -1,0 +1,34 @@
+title: "Type Inference"
+author: "Alvaro Polo"
+description: "Yet another coding blog..."
+#subheading: "Really cool blog about ... something"
+more: "read more"
+url: "http://niklabs.me"
+#baseurl: "/" # comment out if in root directory
+
+comments:
+    disqus: "typeinference"
+#    isso: "comments.mysite.org"
+
+style:
+#    body: "whitesmoke"
+    padding: 33%
+    anchor: "#46f"
+    serif-heading: false
+    nav: "#181818"
+#    headline: "#06f"
+    description: "white"
+    article:
+        odd: "#ffffff"
+        even: "#222222"
+
+links:
+  - github: "https://github.com/apoloval/"
+  - twitter: "https://twitter.com/apolovald/"
+#  - google-plus: "https://plus.google.com/+me"
+  - reddit: "https://www.reddit.com/user/apoloval/"
+  - youtube: "https://www.youtube.com/user/apoloval"
+#  - steam: "http://steamcommunity.com/id/me/"
+
+excerpt_separator: "\n\n\n"
+defaults: [{scope: {path: ""}, values: {layout: "default"}}, {scope: {path: "", type: "posts"}, values: {comments: true}}]
