@@ -3,7 +3,7 @@ author: "Alvaro Polo"
 description: "Yet another coding blog..."
 #subheading: "Really cool blog about ... something"
 more: "read more"
-url: "http://niklabs.me"
+url: "http://typeinference.com/"
 #baseurl: "/" # comment out if in root directory
 
 comments:
@@ -21,6 +21,11 @@ style:
     article:
         odd: "#ffffff"
         even: "#222222"
+
+analytics :
+  provider : google
+  google :
+      tracking_id : 'UA-65852827-1'
 
 links:
   - github: "https://github.com/apoloval/"
