@@ -1,7 +1,8 @@
 ---
 title:  "TDD vs Static Typing"
 date:   2016-05-03
-categories: Scala
+category: typing
+permalink: /scala/:year/:month/:day/:title.html
 ---
 
 Yesterday Uncle Bob posted an article about [Type Wars][1]. In summary, the post describes his own experience with different type systems across the times. How types appeared in the mainstream languages and how they competed from the early days to the dynamic vs static typing debate of our days.
@@ -17,7 +18,7 @@ Well. There is nothing more daring for a software developer than saying that Unc
 
 I am absolutely sure that Uncle Bob code has a code coverage of almost 100%. Thanks to that, he is pretty sure his code works as expected and he is able to evolve and adapt it to new requirements.
 
-But only Uncle Bob is like Uncle Bob. The vast majority of human beings are really far to get 100% of code coverage. Ok, I know, I know. You are of his kind. You are one of these semi-gods that get almost perfect code coverage. I heard many people asserting that before they revealed they were lying. Even so. It is very likely that your team mates are not gods of the coverage like you. And so the rest of developers in your company. And so the authors of the dozens of libraries you use in your codebase. Face it: your code is unlikely to have almost 100% coverage.
+But only Uncle Bob is like Uncle Bob. The vast majority of human beings are really far to get 100% of code coverage. Ok, I know, I know. You are of his kind. You are one of these demigods that get almost perfect code coverage. I heard many people asserting that before they revealed they were lying. Even so. It is very likely that your team mates are not gods of the coverage like you. And so the rest of developers in your company. And so the authors of the dozens of libraries you use in your codebase. Face it: your code is unlikely to have almost 100% coverage.
 
 In the other hand, Uncle Bob, your team mates, any developer in your company, your libraries' authors, and you must follow the rules of the static type system if you code in such kind of languages. Otherwise your code will not compile. It will never be shipped. **TDD is optional. Static type system is not.**
 
