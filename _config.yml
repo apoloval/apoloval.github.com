@@ -7,7 +7,7 @@ url: "http://typeinference.com/"
 #baseurl: "/" # comment out if in root directory
 
 comments:
-    disqus: "typeinference"
+    disqus: "typeinferencecom"
 #    isso: "comments.mysite.org"
 
 style:
