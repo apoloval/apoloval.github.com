@@ -86,7 +86,7 @@ object UserPaths {
 
 Let's summarize what you get by declaring an `OperatingSystem` type in this particular use case.
 
-As mentioned above, the way to OS is detected is not coupled to the way you compute the system dependent paths. Encapsulation and separation of concerns FTW. I'm sure the reader will be familiarized to this: your code evolves safer, the impact of the changes is quite limited, etc, etc. This is really elementary to be discussed here.
+As mentioned above, the way the OS is detected is not coupled to the way you compute the system dependent paths. Encapsulation and separation of concerns FTW. I'm sure the reader will be familiarized to this: your code evolves safer, the impact of the changes is extremely limited, etc, etc. This is really elementary to be discussed here.
 
 The most important fact is that, thanks to the algebraic type you can make a [closed-world assumption][4]. `OperatingSystem` can be just one of `MacOSX` or `Windows`. Any other value is impossible. This is pretty interesting when using the pattern matching in `UserPaths` object. In the first attempt, the compiler will warn you saying the matching is incomplete. Along `"Mac OS X"` and `"Windows"` patterns, there are literally infinite elements that could be received as input. And if you want to make things right, you should protect this unit from the case a invalid or unknown string is passed as argument:
 
@@ -116,7 +116,7 @@ This is just a very simple use case of creating the right abstractions for your 
 
 ## Conclusions
 
-In modern programming languages, defining abstractions is really cheap. Doing so you can use the type system to introduce restrictions according to what you are modeling. The cost-benefit ratio is probably the most profitable you will obtain while developing software. Don't make your client/company loose money just because you had a bad feeling.
+In modern programming languages, defining abstractions is really cheap. Doing so you can use the type system to introduce restrictions according to what you are modeling. The cost-benefit ratio is probably the most profitable you will obtain while developing software. Don't make your client/company loose money just because you had a bad feeling or obsession with "lean" code.
 
 And one final human factor. As the number of followers increase, more people will observe your work. Some observations will be clever. Some others not. Ignore those you cannot learn from AND you cannot make others to learn.
 
