@@ -9,6 +9,7 @@ This week I tweeted a fragment of code showing how to declare an algebraic type 
 
 Tweeter is probably the worst format to discuss the proposal and explain why this is the right direction. I tried by email with no better results. Let's try with a blog post, at least to leave a proof of why I do (and will continue doing) things like that.
 
+
 ## The code
 
 I'm writing a portable desktop application in Scala that should work at least in Windows and Mac OS X. One of the tasks to do it is able to store the application config and some other data files in the resources directory of the user. If you are familiarized with this problem, you will know such a directory differs from one operating system to other.
