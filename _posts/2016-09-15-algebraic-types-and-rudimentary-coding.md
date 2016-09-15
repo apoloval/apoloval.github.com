@@ -5,7 +5,7 @@ category: languages
 permalink: /languages/:year/:month/:day/:title.html
 ---
 
-This week I tweeted a fragment of code showing how to declare an algebraic type to define the operating system in Scala. Surprisingly, there was some negative replies against this practice. Some people pointed out this was over-engineering, defending the code should be simpler (IMHO, rudimentary).
+This week I tweeted a fragment of code showing how to declare an algebraic type to enumerate the operating systems supported by your application in Scala. Surprisingly, there was some negative replies against this practice. Some people pointed out this was over-engineering, defending the code should be simpler (IMHO, rudimentary).
 
 Tweeter is probably the worst format to discuss the proposal and explain why this is the right direction. I tried by email with no better results. Let's try with a blog post, at least to leave a proof of why I do (and will continue doing) things like that.
 
