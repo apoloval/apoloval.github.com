@@ -7,7 +7,7 @@ permalink: /languages/:year/:month/:day/:title.html
 
 This week I tweeted a fragment of code showing how to declare an algebraic type to enumerate the operating systems supported by your application in Scala. Surprisingly, there was some negative replies against this practice. Some people pointed out this was over-engineering, defending the code should be simpler (IMHO, rudimentary).
 
-Tweeter is probably the worst format to discuss the proposal and explain why this is the right direction. I tried by email with no better results. Let's try with a blog post, at least to leave a proof of why I do (and will continue doing) things like that.
+Twitter is probably the worst format to discuss the proposal and explain why this is the right direction. I tried by email with no better results. Let's try with a blog post, at least to leave a proof of why I do (and will continue doing) things like that.
 
 
 ## The code
@@ -95,7 +95,7 @@ The most important fact is that, thanks to the algebraic type you can make a [cl
     osName match {
       case "Mac OS X" => ???
       case "Windows" => ???
-      // Put this of expect dragons
+      // Put this or expect dragons
       case other => throw new IllegalArgumentException(
         s"unknown operating system $other")
     }
@@ -118,7 +118,7 @@ This is just a very simple use case of creating the right abstractions for your 
 
 In modern programming languages, defining abstractions is really cheap. Doing so you can use the type system to introduce restrictions according to what you are modeling. The cost-benefit ratio is probably the most profitable you will obtain while developing software. Don't make your client/company loose money just because you had a bad feeling or obsession with "lean" code.
 
-And one final human factor. As the number of followers increase, more people will observe your work. Some observations will be clever. Some others not. Ignore those you cannot learn from AND you cannot make others to learn.
+And one final human factor. As the number of followers increase, more people will observe your work. Some observations will be clever. Some others not. Ignore those you cannot learn from OR you cannot make others to learn.
 
 [1]: https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)
 [2]: https://en.wikipedia.org/wiki/Separation_of_concerns
