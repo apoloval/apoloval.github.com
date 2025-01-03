@@ -1,5 +1,4 @@
-Type Inference Block
-========
+## Type Inference Blog
 
 This is the source code of [Type Inference](http://typeinference.com/) blog.
 
