@@ -13,11 +13,11 @@ $odd: {% if site.style.article.odd %}{{ site.style.article.odd }}{% else %}white
 $even: {% if site.style.article.even %}{{ site.style.article.even }}{% else %}#222{% endif %}
 
 body
-    +body_background($body, $padding)
+    @include body_background($body, $padding)
     > header, > footer
-        +contrast($nav)
+        @include contrast($nav)
     > div
-        +contrast($description)
+        @include contrast($description)
 
 {% if site.style.serif-heading %}
 
@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6
 {% if site.style.headline %}
 
 body > div:first-of-type
-    +contrast($headline)
+    @include contrast($headline)
     h1
         padding-top: 1em
         padding-bottom: 1em
@@ -46,7 +46,7 @@ nav ul
 {% endif %}
 
 article:nth-of-type(even)
-    +article_background($even, $anchor)
+    @include article_background($even, $anchor)
 
 article:nth-of-type(odd)
-    +article_background($odd, $anchor)
+    @include article_background($odd, $anchor)
