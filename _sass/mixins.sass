@@ -1,38 +1,41 @@
+@use 'sass:color'
+@use 'sass:math'
+
 =contrast($background)
-    $light: lightness($background) > 50%
+    $light: color.channel($background, "lightness", $space: hsl) > 50%
 
     background: $background
     color: if($light, black, white)
 
 =body_background($background, $padding)
-    $is_white: lightness($background) == 100%
+    $is_white: color.channel($background, "lightness", $space: hsl) == 100%
 
     background: $background
 
     @if $is_white
         > *
-            padding: 1em calc(#{$padding} - #{$padding / 5% * 1em})
+            padding: 1em calc(#{$padding} - #{math.div($padding, 5%)} * 1em)
     @else
-        padding: 0 calc(#{$padding * 0.8} - #{$padding * 0.8 / 5% * 1em})
+        padding: 0 calc(#{$padding * 0.8} - #{math.div($padding * 0.8, 5%)} * 1em)
         > *
             padding: 1em calc(13% - 1.6em)
 
 =article_background($background, $anchor)
     +contrast($background)
-    $light: lightness($background) > 50%
+    $light: color.channel($background, "lightness", $space: hsl) > 50%
 
-    border-top-color: if($light, darken($background, 12%), lighten($background, 12%))
+    border-top-color: if($light, color.adjust($background, $lightness: -12%), color.adjust($background, $lightness: 12%))
     tr:hover
-        background-color: if($light, darken($background, 7%), lighten($background, 7%))
+        background-color: if($light, color.adjust($background, $lightness: -7%), color.adjust($background, $lightness: 7%))
     th
         border-bottom-width: 2px
     th, td
-        border-color: if($light, darken($background, 14%), lighten($background, 14%))
+        border-color: if($light, color.adjust($background, $lightness: -14%), color.adjust($background, $lightness: 14%))
     header p
-        color: if($light, darken($background, 60%), lighten($background, 60%))
+        color: if($light, color.adjust($background, $lightness: -60%), color.adjust($background, $lightness: 60%))
     div a
         font-weight: if($anchor, inherit, 400)
-        color: if($anchor, if($light, darken($anchor, 5%), lighten($anchor, 5%)), inherit)
+        color: if($anchor, if($light, color.adjust($anchor, $lightness: -5%), color.adjust($anchor, $lightness: 5%)), inherit)
         &:hover
             color: gray
     footer a

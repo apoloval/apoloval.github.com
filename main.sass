@@ -1,8 +1,7 @@
 ---
 ---
 
-@import basic
-@import mixins
+@use 'index' as *
 
 $body: {% if site.style.body %}{{ site.style.body }}{% else %}white{% endif %}
 $padding: {% if site.style.padding %}{{ site.style.padding }}{% else %}33%{% endif %}
@@ -51,5 +50,3 @@ article:nth-of-type(even)
 
 article:nth-of-type(odd)
     +article_background($odd, $anchor)
-
-@import vendor
