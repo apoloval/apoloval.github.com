@@ -22,11 +22,6 @@ style:
         odd: "#ffffff"
         even: "#222222"
 
-analytics :
-  provider : google
-  google :
-      tracking_id : 'UA-65852827-1'
-
 links:
   - github: "https://github.com/apoloval/"
   - twitter: "https://twitter.com/apolovald/"
